@@ -59,3 +59,42 @@ function areSame(address1, address2) {
 }
 console.log(areEqual(address1, address2));
 console.log(areSame(address1, address2));
+
+// ex4 Blogpost==============================================
+// let post = {
+//   title: "a",
+//   body: "b",
+//   author: "c",
+//   views: 10,
+//   comments: [
+//     { author: "a", body: "b" },
+//     { author: "c", body: "d" },
+//   ],
+//   isLive: true,
+// };
+//console.log(post);
+//ex5 PostObject ============================================
+
+let post = new Post("a", "b", "c");
+console.log(post);
+
+function Post(title, body, author) {
+  this.title = title;
+  this.body = body;
+  this.author = author;
+  this.views = 0;
+  this.comments = [];
+  this.isLive = false;
+}
+// ex6 =====================================================
+let priceRanges = [
+  { label: "$", tooltip: "Inexpensive", minPerPerson: 0, maxPerPerson: 10 },
+  { label: "$", tooltip: "Modulate", minPerPerson: 11, maxPerPerson: 50 },
+  {
+    label: "$",
+    tooltip: "expensive",
+    minPerPerson: 51,
+    maxPerPerson: 50000000,
+  },
+];
+let restaurants = [{ averagePerPerson: 5 }];
