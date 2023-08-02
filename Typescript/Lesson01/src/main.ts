@@ -1,10 +1,24 @@
-let username : string = 'Tim';
-console.log(username);
+interface Shape {
+  area: number;
+  perimeter: number;
+  angles: number;
+  largerThan(Shape): boolean;
+}
 
-let age: number = 29;
-if (age < 50) 
-age+=10;
+class Square implements Shape {
+  w: number;
+  h: number;
 
-console.log(age)
+  constructor(w: number, h: number) {
+    this.w = w;
+    this.h = w;
+  }
 
+  area(): number {
+    return this.w * this.h;
+  }
+}
 
+class rectangle implements Shape {}
+
+class Circle implements Shape {}
